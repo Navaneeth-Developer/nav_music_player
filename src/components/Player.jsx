@@ -3,10 +3,25 @@ import {
   faPlay,
   faAngleLeft,
   faAngleRight,
+  faL,
 } from "@fortawesome/free-solid-svg-icons";
-import React from "react";
+import React, { useRef } from "react";
 
-const Player = () => {
+const Player = ({ currentSong,isPlaying, setIsPlaying }) => {
+  // refs
+  const audioRef = useRef(null);
+
+  //EventHandlers
+  const playSongHandler = () => {
+    if(isPlaying){
+        audioRef.current.pause();
+        setIsPlaying(false);
+    }else{
+        audioRef.current.play();
+        setIsPlaying(true);
+    }
+  };
+
   return (
     <div className="player">
       <div className="time-controller">
@@ -16,9 +31,15 @@ const Player = () => {
       </div>
       <div className="play-control">
         <FontAwesomeIcon className="skip-back" size="2x" icon={faAngleLeft} />
-        <FontAwesomeIcon className="play" size="2x" icon={faPlay} />
+        <FontAwesomeIcon
+          onClick={playSongHandler}
+          className="play"
+          size="2x"
+          icon={faPlay}
+        />
         <FontAwesomeIcon className="skip-right" size="2x" icon={faAngleRight} />
       </div>
+      <audio ref={audioRef} src={currentSong.audio}></audio>
     </div>
   );
 };
