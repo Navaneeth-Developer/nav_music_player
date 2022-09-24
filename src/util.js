@@ -11,6 +11,7 @@ const chillHop = () => {
       audio: "https://mp3.chillhop.com/serve.php/?mp3=15224",
       color: ["#AE713D", "#283431"],
       id: uuidv4(),
+      active:true
     },
     {
       name: "Mario Kart",
@@ -21,6 +22,7 @@ const chillHop = () => {
       audio: "https://mp3.chillhop.com/serve.php/?mp3=15228",
       color: ["#AE713D", "#283431"],
       id: uuidv4(),
+      active:false
     },
     {
       name: "Self Luv",
@@ -31,6 +33,7 @@ const chillHop = () => {
       audio: "https://mp3.chillhop.com/serve.php/?mp3=15235",
       color: ["#AE713D", "#283431"],
       id: uuidv4(),
+      active:false
     },
     {
       name: "Reflection",
@@ -41,6 +44,7 @@ const chillHop = () => {
       audio: "https://mp3.chillhop.com/serve.php/?mp3=9228",
       color: ["#C24E7E", "#5F1A4B"],
       id: uuidv4(),
+      active:false
     },
     {
       name: "Upset (hold it in)",
@@ -51,6 +55,7 @@ const chillHop = () => {
       audio: "https://mp3.chillhop.com/serve.php/?mp3=7925",
       color: ["#C24E7E", "#5F1A4B"],
       id: uuidv4(),
+      active:false
     },
     {
       name: "Golden",
@@ -61,6 +66,7 @@ const chillHop = () => {
       audio: "https://mp3.chillhop.com/serve.php/?mp3=13005",
       color: ["#98BB5F", "#42995A"],
       id: uuidv4(),
+      active:false
     },
     {
       name: "Evenfall",
@@ -71,6 +77,7 @@ const chillHop = () => {
       audio: "https://mp3.chillhop.com/serve.php/?mp3=13007",
       color: ["#98BB5F", "#42995A"],
       id: uuidv4(),
+      active:false
     },
   ]
 }
